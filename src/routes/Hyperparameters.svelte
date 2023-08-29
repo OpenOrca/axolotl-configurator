@@ -22,7 +22,8 @@
                 field: 'learning_rate',
                 type: 'number',
                 min: 0,
-                max: 1
+                max: 1,
+                step: 0.0000001
             },
             {
                 name: 'Gradient Accum',
@@ -51,14 +52,16 @@
                 field: 'weight_decay',
                 type: 'number',
                 min: 0,
-                max: 1
+                max: 1,
+                step: 0.01
             },
             {
                 name: 'Max Grad Norm',
                 field: 'max_grad_norm',
                 type: 'number',
                 min: 0,
-                max: 1
+                max: 1,
+                step: 0.01
             },
         ],
         [
@@ -68,7 +71,8 @@
                 type: 'number',
                 when: ['adamw', 'in', 'optimizer'],
                 min: 0,
-                max: 1
+                max: 1,
+                step: 0.01
             },
             {
                 name: 'Adam Beta 1',
@@ -76,7 +80,8 @@
                 type: 'number',
                 when: ['adamw', 'in', 'optimizer'],
                 min: 0,
-                max: 1
+                max: 1,
+                step: 0.01
             },
         ]
     ]

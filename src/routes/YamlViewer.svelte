@@ -34,9 +34,6 @@
         <div class="w-full">
             <h4 class="h4">
                 <button type="button" class="btn btn-small float-right" on:click={handleUpdateYaml}>Update YAML</button>
-                <button type="button" class="btn btn-small float-right" on:click={handleHideUnusedParams}>
-                    {hide_null ? "Hide Unused Fields" : "Show All Fields"}
-                </button>
             </h4>
             <textarea class="w-full h-96 input" on:input={handleChange} bind:value={config_string}></textarea>
         </div>

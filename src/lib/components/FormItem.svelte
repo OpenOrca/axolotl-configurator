@@ -24,7 +24,7 @@
             <input type=text class="input" bind:value={config[ui.field]}>
         {/if}
         {#if ui.type == 'number'}
-            <input type="number" class="input" max={ui.max} min={ui.min} bind:value={config[ui.field]}>
+            <input type="number" pattern="^(0(\.\d+)?|1(\.0+)?)$" class="input" step={ui.step || 1} bind:value={config[ui.field]}>
         {/if}
         {#if ui.type == 'select'}
             <select class="select" bind:value={config[ui.field]} name={ui.name}>

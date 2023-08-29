@@ -29,6 +29,7 @@
                 type: 'number',
                 min: 0,
                 max: 1,
+                step: 0.01,
                 description: '% of dataset to run eval on'
             },
         ]

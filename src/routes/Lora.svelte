@@ -21,7 +21,8 @@
             name: 'Dropout',
             field: 'lora_dropout',
             type: 'number',
-            min: 0
+            min: 0,
+            step: 0.01
         },
     ]
 </script>
