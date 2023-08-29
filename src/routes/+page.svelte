@@ -16,7 +16,7 @@
 
     function removeFields(obj: any) {
         for (const prop in obj) {
-            if (obj[prop] === null || prop.startsWith('_') || obj[prop] == false) {
+            if (obj[prop] === null || prop.startsWith('_')) {
                 delete obj[prop];
             } else if (typeof obj[prop] === 'object') {
                 removeFields(obj[prop]); // Recurse into nested objects
