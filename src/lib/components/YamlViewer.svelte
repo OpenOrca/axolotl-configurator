@@ -1,5 +1,5 @@
 <script lang="ts">
-   import {config} from './config'
+    export let config: any
     import YAML from 'yaml'
     let hide_null = true
     let config_string = YAML.stringify($config)

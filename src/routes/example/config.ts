@@ -1,5 +1,8 @@
 import { writable } from 'svelte/store';
 
 export const config = writable({
-    enabled: true
+    number: 10,
+    text: "Hello World",
+    select: "linear"
+
 })

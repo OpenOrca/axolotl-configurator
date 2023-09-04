@@ -1,9 +1,9 @@
 <script lang="ts">
-	import YamlViewer from './YamlViewer.svelte';
+	import YamlViewer from '../../lib/components/YamlViewer.svelte';
 	import Datasets from './Datasets.svelte';
     import { Accordion } from '@skeletonlabs/skeleton';
     import {config} from './config'
-    import {validate_config} from '$lib/validation'
+    import {validate_config} from './validation'
     import yaml from 'js-yaml'
 	import Model from './Model.svelte';
 	import Wandb from './Wandb.svelte';
@@ -53,7 +53,7 @@
             <Lora/>
             <Optimization/>
             <Checkpoints/>
-            <YamlViewer/>
+            <YamlViewer {config}/>
         </Accordion>
     </div>
     <div>

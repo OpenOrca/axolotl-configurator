@@ -1,10 +1,11 @@
 <script lang="ts">
     import { Accordion } from '@skeletonlabs/skeleton';
-    import {config} from '$lib/config'
-    import {validate_config} from '$lib/validation'
+    import {config} from './config'
+    import {example_validation} from './validation'
     import yaml from 'js-yaml'
 	import ExampleComponent from './ExampleComponent.svelte';
-    $: $config = validate_config($config) 
+	import YamlViewer from '$lib/components/YamlViewer.svelte';
+    $: $config = example_validation($config) 
 
     function removeFields(obj: any) {
         for (const prop in obj) {
@@ -39,6 +40,7 @@
     <div class="flex space-x-4">
         <Accordion class="card p-4">
             <ExampleComponent/>
+            <YamlViewer {config}/>
         </Accordion>
     </div>
     <div>
