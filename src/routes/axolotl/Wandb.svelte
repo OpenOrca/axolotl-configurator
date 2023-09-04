@@ -1,5 +1,6 @@
 <script>
 	import Section from "$lib/components/Section.svelte";
+    import {config} from './config'
     let wandb_config = [
         [
             {
@@ -26,4 +27,4 @@
     ]
 </script>
 
-<Section name="Weights & Bias" ui_config={wandb_config}/>
+<Section config={$config} name="Weights & Bias" ui_config={wandb_config}/>

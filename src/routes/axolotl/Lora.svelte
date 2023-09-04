@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Section from "$lib/components/Section.svelte";
-    import {config} from '$lib/config'
+    import {config} from './config'
 
     let lora_config = [
         [
@@ -28,5 +28,5 @@
 </script>
 
 {#if $config.adapter }
-    <Section name="LoRA Config" ui_config={lora_config}/>
+    <Section config={$config} name="LoRA Config" ui_config={lora_config}/>
 {/if}

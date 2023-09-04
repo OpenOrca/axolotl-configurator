@@ -1,5 +1,6 @@
 <script>
 	import Section from "$lib/components/Section.svelte";
+    import {config} from './config'
     let training_config = [
         {
             name: 'Model',
@@ -53,4 +54,4 @@
     ]
 </script>
 
-<Section name="Axolotl Training Config" description="All settings required to update a training are shown by default." open ui_config={training_config}/>
+<Section config={$config} name="Axolotl Training Config" description="All settings required to update a training are shown by default." open ui_config={training_config}/>

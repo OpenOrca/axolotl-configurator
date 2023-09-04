@@ -1,6 +1,7 @@
 <script>
 
 	import Section from "$lib/components/Section.svelte";
+    import {config} from './config'
     let hyper_param_config = [
         [
             {
@@ -86,4 +87,4 @@
         ]
     ]
 </script>
-<Section open name="Hyperparameters" ui_config={hyper_param_config}/>
+<Section config={$config} open name="Hyperparameters" ui_config={hyper_param_config}/>

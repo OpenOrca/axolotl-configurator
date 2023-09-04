@@ -1,8 +1,7 @@
 <script lang="ts">
-    import FormInput from '$lib/components/FormInput.svelte';
     import { AccordionItem } from '@skeletonlabs/skeleton';
 	import FormItem from '$lib/components/FormItem.svelte';
-    import { config } from '$lib/config'
+    export let config: any
     export let ui_config: any = [];
     export let name: string
     export let open = false
@@ -26,12 +25,12 @@
             {#if Array.isArray(ui)}
                 <div class="flex space-x-5">
                     {#each ui as ui_el }
-                        <FormItem ui={ui_el} bind:config={$config}/>
+                        <FormItem ui={ui_el} bind:config={config}/>
                     {/each}
                 </div>
             {:else}
                 <!--One form element per row-->
-                <FormItem {ui} bind:config={$config}/>
+                <FormItem {ui} bind:config={config}/>
             {/if}
         {/each}
     </svelte:fragment>

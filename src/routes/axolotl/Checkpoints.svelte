@@ -1,6 +1,7 @@
 <script>
 
 	import Section from "$lib/components/Section.svelte";
+    import {config} from './config'
     let checkpoint_configs = [
         [
             {
@@ -36,4 +37,4 @@
     ]
 </script>
 
-<Section name="Checkpoints" ui_config={checkpoint_configs}/>
+<Section name="Checkpoints" config={$config} ui_config={checkpoint_configs}/>

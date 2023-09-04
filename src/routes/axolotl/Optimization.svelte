@@ -1,6 +1,7 @@
 <script>
 
 	import Section from "$lib/components/Section.svelte";
+    import {config} from './config'
     let optimization_config = [
         [
             {
@@ -20,4 +21,4 @@
         ],
     ]
 </script>
-<Section name="Optimization" ui_config={optimization_config}/>
+<Section config={$config} name="Optimization" ui_config={optimization_config}/>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { AccordionItem } from "@skeletonlabs/skeleton";
     import Dataset from "$lib/components/Dataset.svelte";
-    import {config} from '$lib/config'
+    import {config} from './config'
 
 
     const handleAddDataset = () => {
